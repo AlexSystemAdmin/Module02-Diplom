@@ -378,14 +378,36 @@
                         <label class="contact__boxLable">Телефон или почта</label>
                         <input class="contact__boxInput" type="tel" placeholder="Введите телефон">
                         <label class="contact__boxLable">Выберите удобный способ связи</label>
-                        <select class="contact__boxSelect">
+                        <div class="contact__boxSelect">
+                            <label class="contact__boxDrop">
+                                <input id="target-drop" type="checkbox" class="contact__boxDropInput">
+                                <span class="contact__boxControl">Telegram</span>
+                                <img class="contact__boxSelectArrow" src="/src/images/Arrow 3.svg" alt="">
+                                <ul class="contact__boxDrop-items">
+                                    <li class="contact__Item-drop">
+                                        <p>WhatsApp</p>
+                                    </li>
+                                    <li class="contact__Item-drop">
+                                        <p>Viber</p>
+                                    </li>
+                                    <li class="contact__Item-drop">
+                                        <p>Звонок на телефон</p>
+                                    </li>
+                                    <li class="contact__Item-drop">
+                                        <p>SMS сообщение</p>
+                                    </li>
+                                </ul>
+                                <label for="target-drop" class="contact__Overlay-close"></label>
+                            </label>
+                        </div>
+                        <!--<select class="contact__boxSelect">
                             <div class="contact__boxSelectAppearance"></div>
                             <option class="contact__boxSelectOption" value="Telegram">Telegram</option>
                             <option class="contact__boxSelectOption" value="WhatsApp">WhatsApp</option>
                             <option class="contact__boxSelectOption" value="Viber">Viber</option>
                             <option class="contact__boxSelectOption" value="Звонок на телефон">Звонок на телефон</option>
                             <option class="contact__boxSelectOption" value="SMS сообщение">SMS сообщение</option>
-                        </select>
+                        </select>-->
                         <button class="contact__boxButton" type="submit">
                             <span>Отправить</span>
                         </button>
