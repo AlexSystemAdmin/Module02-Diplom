@@ -384,17 +384,17 @@
                                 <span class="contact__boxControl">Telegram</span>
                                 <img class="contact__boxSelectArrow" src="/src/images/Arrow 3.svg" alt="">
                                 <ul class="contact__boxDrop-items">
-                                    <li class="contact__Item-drop">
-                                        <p>WhatsApp</p>
+                                    <li class="contact__Item-drop" onclick="contact__boxControl1()">
+                                        <p id="contact__Item-drop1">WhatsApp</p>
                                     </li>
                                     <li class="contact__Item-drop">
-                                        <p>Viber</p>
+                                        <p id="contact__Item-drop2" onclick="contact__boxControl2()">Viber</p>
                                     </li>
                                     <li class="contact__Item-drop">
-                                        <p>Звонок на телефон</p>
+                                        <p id="contact__Item-drop3" onclick="contact__boxControl3()">Звонок на телефон</p>
                                     </li>
                                     <li class="contact__Item-drop">
-                                        <p>SMS сообщение</p>
+                                        <p id="contact__Item-drop4" onclick="contact__boxControl4()">SMS сообщение</p>
                                     </li>
                                 </ul>
                                 <label for="target-drop" class="contact__Overlay-close"></label>
@@ -449,5 +449,23 @@
             </div>
         </div>
     </footer>
+    <script>
+        function contact__boxControl1() {
+            let container = document.getElementsByClassName("contact__boxControl");
+            container[0].innerText = document.getElementById("contact__Item-drop1").innerText
+        }
+        function contact__boxControl2() {
+            let container = document.getElementsByClassName("contact__boxControl");
+            container[0].innerText = document.getElementById("contact__Item-drop2").innerText
+        }
+        function contact__boxControl3() {
+            let container = document.getElementsByClassName("contact__boxControl");
+            container[0].innerText = document.getElementById("contact__Item-drop3").textContent
+        }
+        function contact__boxControl4() {
+            let container = document.getElementsByClassName("contact__boxControl");
+            container[0].innerText = document.getElementById("contact__Item-drop4").innerText
+        }
+    </script>
 </body>
 </html>
