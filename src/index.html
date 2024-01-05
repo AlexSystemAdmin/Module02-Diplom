@@ -6,6 +6,98 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container-menuMobi">
+        <div class="menuMobi">
+            <div class="menuMobi__close" onclick="close_menuMobi()"></div>
+            <ul class="menuMobi__nav">
+                <li class="menuMobi__list menuMobi__list_mod">
+                    <a href="#" class="menuMobi__link">Обо мне</a>
+                </li>
+                <li class="menuMobi__list">
+                    <a href="#" class="menuMobi__link">Портфолио</a>
+                </li>
+                <li class="menuMobi__list">
+                    <a href="#" class="menuMobi__link">Этапы работ</a>
+                </li>
+                <li class="menuMobi__list">
+                    <a href="#" class="menuMobi__link">Цены</a>
+                </li>
+                <li class="menuMobi__list" onclick="open_container_menuMobi_contact()">
+                    <a href="#" class="menuMobi__link">Обратная связь</a>
+                </li>
+            </ul>
+            <div class="menuMobi__contact">
+                <a href="tel:89237777777" class="menuMobi__tel">8 923 777-77-77</a>
+                <a href="mailto:alexdev@gmail.com" class="menuMobi__mail">alexdev@gmail.com</a>
+            </div>
+            <div class="menuMobi__social">
+                <a href="#" class="menuMobi__socialLink menuMobi__socialLink_vk">Vk</a>
+                <a href="#" class="menuMobi__socialLink menuMobi__socialLink_Instagram">Instagram</a>
+                <a href="#" class="menuMobi__socialLink menuMobi__socialLink_Linkedin">Linkedin</a>
+            </div>
+        </div>
+    </div>
+    <div class="menuMobi_mod">
+        <div class="container-menuMobi_footer">
+            <div class="menuMobi__discussingProjectTesis">
+                <div class="menuMobi__discussingProjectTesisBox1">
+                    <div class="menuMobi__discussingProjectFrontend">
+                        <p class="menuMobi__discussingProjectName">Front-end</p>
+                        <p class="menuMobi__discussingProjectDescription">HTML+CSS+JS кодирование дизайнов любой сложности</p>
+                    </div>
+                    <div class="menuMobi__discussingProjectBackend">
+                        <p class="menuMobi__discussingProjectName">back-end</p>
+                        <p class="menuMobi__discussingProjectDescription">Разработка сложной back-end логики для готового front-end</p>
+                    </div>
+                </div>
+                <div class="menuMobi__discussingProjectTesisBox2">
+                    <div class="menuMobi__discussingProjectWordpress">
+                        <p class="menuMobi__discussingProjectName">Wordpress</p>
+                        <p class="menuMobi__discussingProjectDescription">Разработка сайтов - от блога до&nbsp;интернет магазина</p>
+                    </div>
+                    <div class="menuMobi__discussingProjectSeo">
+                        <p class="menuMobi__discussingProjectName">seo продвижение</p>
+                        <p class="menuMobi__discussingProjectDescription">Качественное улучшение позиций сайта в поисковой выдаче</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-menuMobi container-menuMobi_contact">
+        <h1 class="menuMobi__contactHeaderTitle">Расскажите о своем проекте</h1>
+        <p class="menuMobi__contactHeaderDecription">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+        <div class="menuMobi__close_contact" onclick="close_container_menuMobi_contact()"></div>
+        <div class="menuMobi__contactBoxForm">
+            <label class="menuMobi__contactBoxLable">Телефон или почта</label>
+            <input type="tel" class="menuMobi__contactBoxInput" placeholder="Введите телефон">
+            <label class="menuMobi__contactBoxLable">Выберите удобный способ связи</label>
+            <div class="menuMobi__contactBoxSelect">
+                <label class="menuMobi__contactBoxDrop">
+                    <input id="target-drop__menuMobi" type="checkbox" class="menuMobi__contactBoxDropInput">
+                    <span class="menuMobi__contactBoxControl">Telegram</span>
+                    <img class="menuMobi__contactBoxSelectArrow" src="/src/images/Arrow1.svg" alt="">
+                    <ul class="menuMobi__contactBoxDrop-items">
+                        <li class="menuMobi__contactItem-drop" onclick="menuMobi__contactBoxControl1()">
+                            <p id="menuMobi__contactItem-drop1">WhatsApp</p>
+                        </li>
+                        <li class="menuMobi__contactItem-drop">
+                            <p id="menuMobi__contactItem-drop2" onclick="menuMobi__contactBoxControl2()">Viber</p>
+                        </li>
+                        <li class="menuMobi__contactItem-drop">
+                            <p id="menuMobi__contactItem-drop3" onclick="menuMobi__contactBoxControl3()">Звонок на телефон</p>
+                        </li>
+                        <li class="menuMobi__contactItem-drop">
+                            <p id="menuMobi__contactItem-drop4" onclick="menuMobi__contactBoxControl4()">SMS сообщение</p>
+                        </li>
+                    </ul>
+                    <label for="target-drop__menuMobi" class="menuMobi_overlay-close"></label>
+                </label>
+            </div>
+            <button class="menuMobi__contactBoxButton" type="submit">
+                <span>Отправить</span>
+            </button>
+        </div>
+    </div>
     <header>
         <div class="container">
             <div class="header">
@@ -32,7 +124,7 @@
                     <a href="tel:89237777777" class="header__tel">8 923 777-77-77</a>
                     <a href="mailto:alexdev@gmail.com" class="header__mail">alexdev@gmail.com</a>
                 </div>
-                <button class="header__button"></button>
+                <button class="header__button" onclick="open_menuMobi()"></button>
             </div>
         </div>
     </header>
@@ -482,6 +574,7 @@
         /*let tariffs__tariffDescription_correct_2 = document.getElementById("tariffs__tariffDescription_correct-2");
         tariffs__tariffDescription_correct_2.innerHTML = "Небольшой сайт с&nbsp;n-количеством страниц";*/
         
+        // scripts for form page
 
         function contact__boxControl1() {
             let container = document.getElementsByClassName("contact__boxControl");
@@ -498,6 +591,54 @@
         function contact__boxControl4() {
             let container = document.getElementsByClassName("contact__boxControl");
             container[0].innerText = document.getElementById("contact__Item-drop4").innerText
+        }
+
+        // scripts for form menuMobi
+
+        function open_menuMobi(){
+            let container_menuMobi = document.getElementsByClassName("container-menuMobi");
+            let menuMobi_mod = document.getElementsByClassName("menuMobi_mod");
+            container_menuMobi[0].style.top=0;
+            menuMobi_mod[0].style.top="618px";
+        }
+
+        function close_menuMobi(){
+            let container_menuMobi = document.getElementsByClassName("container-menuMobi");
+            let menuMobi_mod = document.getElementsByClassName("menuMobi_mod");
+            container_menuMobi[0].style.top="-600px";
+            menuMobi_mod[0].style.top="-600px";
+        }
+
+        function open_container_menuMobi_contact(){
+            let container_menuMobi_contact = document.getElementsByClassName("container-menuMobi_contact");
+            container_menuMobi_contact[0].style.top = 0
+        }
+
+        function close_container_menuMobi_contact(){
+            let container_menuMobi_contact = document.getElementsByClassName("container-menuMobi_contact");
+            container_menuMobi_contact[0].style.top = "-600px"
+        }
+
+        if(document.documentElement.clientWidth <= 378){
+            let menuMobi__contactHeaderTitle = document.getElementsByClassName("menuMobi__contactHeaderTitle");
+            menuMobi__contactHeaderTitle[0].innerHTML = "Расскажите о&nbsp;своем&nbsp;проекте";
+        }
+
+        function menuMobi__contactBoxControl1(){
+            let container = document.getElementsByClassName("menuMobi__contactBoxControl");
+            container[0].innerText = document.getElementById("menuMobi__contactItem-drop1").innerText;
+        }
+        function menuMobi__contactBoxControl2(){
+            let container = document.getElementsByClassName("menuMobi__contactBoxControl");
+            container[0].innerText = document.getElementById("menuMobi__contactItem-drop2").innerText;
+        }
+        function menuMobi__contactBoxControl3(){
+            let container = document.getElementsByClassName("menuMobi__contactBoxControl");
+            container[0].innerText = document.getElementById("menuMobi__contactItem-drop3").innerText;
+        }
+        function menuMobi__contactBoxControl4(){
+            let container = document.getElementsByClassName("menuMobi__contactBoxControl");
+            container[0].innerText = document.getElementById("menuMobi__contactItem-drop4").innerText;
         }
     </script>
 </body>
