@@ -72,7 +72,7 @@
             <input type="tel" class="menuMobi__contactBoxInput" placeholder="Введите телефон">
             <label class="menuMobi__contactBoxLable">Выберите удобный способ связи</label>
             <div class="menuMobi__contactBoxSelect">
-                <label class="menuMobi__contactBoxDrop">
+                <div id="menuMobi__contactBoxDrop" class="menuMobi__contactBoxDrop">
                     <input id="target-drop__menuMobi" type="checkbox" class="menuMobi__contactBoxDropInput">
                     <span class="menuMobi__contactBoxControl">Telegram</span>
                     <img class="menuMobi__contactBoxSelectArrow" src="/src/images/Arrow1.svg" alt="">
@@ -91,7 +91,7 @@
                         </li>
                     </ul>
                     <label for="target-drop__menuMobi" class="menuMobi_overlay-close"></label>
-                </label>
+                </div>
             </div>
             <button class="menuMobi__contactBoxButton" type="submit">
                 <span>Отправить</span>
@@ -477,7 +477,7 @@
                         <input class="contact__boxInput" type="tel" placeholder="Введите телефон">
                         <label class="contact__boxLable">Выберите удобный способ связи</label>
                         <div class="contact__boxSelect">
-                            <label class="contact__boxDrop">
+                            <div id="contact__boxDrop" class="contact__boxDrop" >
                                 <input id="target-drop" type="checkbox" class="contact__boxDropInput">
                                 <span class="contact__boxControl">Telegram</span>
                                 <img class="contact__boxSelectArrow" src="/src/images/Arrow1.svg" alt="">
@@ -496,7 +496,7 @@
                                     </li>
                                 </ul>
                                 <label for="target-drop" class="contact__Overlay-close"></label>
-                            </label>
+                            </div>
                         </div>
                         <!--<select class="contact__boxSelect">
                             <div class="contact__boxSelectAppearance"></div>
@@ -556,7 +556,10 @@
         }
     </script>-->
     <script>
+
         // tariffs__tariffsTitle_correct
+
+
         if(document.documentElement.clientWidth <= 800){
             let tariffs__tariffsTitle_correct_1 = document.getElementById("tariffs__tariffsTitle_correct-1");
             tariffs__tariffsTitle_correct_1.textContent = "Разработка лэндинга или сайт визитки";
@@ -565,16 +568,37 @@
             tariffs__tariffsTitle_correct_3.textContent = "Разработка интернет - магазина";
         }
 
+
         // tariffs__tariffDescription_correct
+
+
         if(document.documentElement.clientWidth <= 800){
             let tariffs__tariffDescription_correct_1 = document.getElementById("tariffs__tariffDescription_correct-1");
             tariffs__tariffDescription_correct_1.innerHTML = "Небольшой сайт состоящий из&nbsp;одной&nbsp;страницы";
         }
 
-        /*let tariffs__tariffDescription_correct_2 = document.getElementById("tariffs__tariffDescription_correct-2");
-        tariffs__tariffDescription_correct_2.innerHTML = "Небольшой сайт с&nbsp;n-количеством страниц";*/
+
+
+
         
         // scripts for form page
+
+
+
+        function open_boxDrop_items(){
+            let input = document.getElementById("target-drop");
+
+            if(input.checked == true){
+                input.checked = false;
+            }
+            else{
+                input.checked = true;
+            }
+        }
+
+        let contact__boxDrop = document.getElementById("contact__boxDrop");
+        contact__boxDrop.addEventListener("click", open_boxDrop_items);
+
 
         function contact__boxControl1() {
             let container = document.getElementsByClassName("contact__boxControl");
@@ -593,7 +617,25 @@
             container[0].innerText = document.getElementById("contact__Item-drop4").innerText
         }
 
+
+
         // scripts for form menuMobi
+
+
+        function menuMobi_contactBoxDrop_items(){
+            let input = document.getElementById("target-drop__menuMobi"); 
+
+            if(input.checked === true){
+                input.checked = false;
+            }
+            else{
+                input.checked = true;
+            }
+        }
+
+        let menuMobi__contactBoxDrop = document.getElementById("menuMobi__contactBoxDrop");
+        menuMobi__contactBoxDrop.addEventListener("click", menuMobi_contactBoxDrop_items);
+
 
         function open_menuMobi(){
             let container_menuMobi = document.getElementsByClassName("container-menuMobi");
