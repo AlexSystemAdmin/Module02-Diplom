@@ -1685,6 +1685,7 @@ body{
             margin-bottom: 39px;
         }
         &__tesisFlex{
+            display: flex;
             padding-top: 4rem;
             margin-bottom: 6rem;
         }
@@ -1726,6 +1727,7 @@ body{
         }
         &__tesisFlex-2{
             flex-direction: column;
+            justify-content: start;
             align-items: start;
             gap: 30px;
         }
@@ -1870,6 +1872,13 @@ body{
         &__text{
             flex-direction: column;
             gap: 14px;
+        }
+    }
+}
+@media(max-width: 520px){
+    .additionally{
+        &__tesisFlex{
+            display: block;
         }
     }
 }
