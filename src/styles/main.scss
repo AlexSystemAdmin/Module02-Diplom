@@ -361,6 +361,35 @@ body{
         line-height: 28px;
         margin: 0;
         margin-bottom: clamp(1.8rem, 1.47vw + 1rem, 3.8rem);
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            background-image: url('../images/Logo.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: clamp(3.1rem, 3.25vw + 1rem, 7.2rem);
+            width: clamp(2.9rem, 3.07vw + 0.75rem, 6.6rem);
+            background-repeat: no-repeat;
+            top: -23px; //101
+            left: calc(-1*clamp(6rem, 17vw - 17rem, 15rem)); //2
+        }
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            background-image: url('/src/images/Circle.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+            width: clamp(13.5rem, 9.1vw + 8rem, 25.3rem);
+            height: clamp(13.5rem, 9.1vw + 8rem, 25.3rem);
+            top: -61px; //-24
+            left: -127px; //-52
+        }
     }
     &__profession{
         color: $black;
@@ -372,16 +401,16 @@ body{
         margin: 0;
         margin-bottom: 9rem;
     }
-    &__circle{
+    /*&__circle{
         position: absolute;
         z-index: -1;
         top: clamp(3.4rem, 2.18vw + 2.25rem, 6.4rem);
         right: clamp(26.6rem, 78vw - 8rem, 140.5rem);
         width: clamp(13.5rem, 9.1vw + 8rem, 25.3rem);
         height: clamp(13.5rem, 9.1vw + 8rem, 25.3rem);
-    }
+    }*/
 }
-.logo{
+/*.logo{
     position: absolute;
     background-image: url('../images/Logo.svg');
     background-position: center;
@@ -390,29 +419,28 @@ body{
     width: clamp(2.9rem, 3.07vw + 0.75rem, 6.6rem);
     background-repeat: no-repeat;
     left: clamp(1rem, 65vw - 100rem, 24rem);
-    top: 102px;
-    &_contact{
+    top: 102px;*/
+    /*&_contact{
         width: clamp(2.734rem, 2.5vw + 1.8rem, 6.534rem);
         height: clamp(4.067rem, 2.5vw + 3.1rem, 7.767rem);
-        /*left: -176px;
-        top: 21px;*/
         left: auto;
         right: clamp(103.6rem, 69vw - 1rem, 125.1rem);
         top: clamp(-9.8rem, 55vw - 103.3rem, 2.3rem);
-    }
-}
+    }*/
+//}
 .social{
     display: flex;
     padding-left: 0;
     list-style-type: none;
-    &__circle{
+    position: relative;
+    /*&__circle{
         position: absolute;
         z-index: -1;
         width: clamp(6rem, 5vw + 3rem, 10.6rem);
         height: clamp(6rem, 5vw + 3rem, 10.6rem);
         top: clamp(21.8rem, 10vw + 15rem, 34rem);
         right: clamp(3.8rem, 26.1vw - 7rem, 42.8rem);
-    }
+    }*/
     &__link{
         text-decoration: none;
         color: $black;
@@ -427,10 +455,27 @@ body{
     &_linkedin{
         padding-right: 0;
     }
+    &::before{
+        content: '';
+        position: absolute;
+        display: block;
+        background-image: url('/src/images/Circle.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        width: clamp(6rem, 5vw + 3rem, 10.6rem);
+        height: clamp(6rem, 5vw + 3rem, 10.6rem);
+        top: calc(-1*clamp(2.1rem, 2vw + 1rem, 4.4rem)); //-21
+        right: clamp(2.8rem, 1vw + 2.38rem, 3.8rem); //28
+    }
     &_contact{
         align-items: end;
         margin: 0;
         margin-bottom: 3px;
+        &::before{
+            display: none;
+        }
     }
     &__contactLink{
         text-decoration: none;
@@ -633,6 +678,7 @@ body{
 .portfolio{
     position: relative;
     &__title{
+        position: relative;
         color: $black;
         font-size: clamp(2.8rem, 3.2vw + 1.5rem, 7.4rem);
         font-weight: 700;
@@ -640,9 +686,21 @@ body{
         margin: 0;
         margin-bottom: clamp(4.7rem, 7vw + 1.75rem, 14.5rem);
         /*line-height: normal;*/
+        &::after{
+            content: '';
+            display: block;
+            width: clamp(19.7rem, 19vw + 12rem, 46.5rem);
+            height: clamp(19.7rem, 19vw + 12rem, 46.5rem);
+            position: absolute;
+            border-radius: 465px;
+            background: $white;
+            z-index: -1;
+            top: calc(-1*clamp(3.6rem, 4vw + 1.9rem, 9.2rem));
+            left: clamp(14.3rem, 14.5vw + 8rem, 34.7rem) ;
+        }
     }
-    &__circle{
-        position: absolute;
+    /*&__circle{
+        position: absolute;y
         border-radius: 465px;
         background: $white;
         z-index: -1;
@@ -650,7 +708,7 @@ body{
         height: clamp(19.7rem, 19vw + 12rem, 46.5rem);
         top: -92px;
         left: clamp(15.3rem, 44vw - 9rem, 73.7rem);
-    }
+    }*/
     &__list{
         margin-bottom: 18rem;
     }
@@ -1127,14 +1185,14 @@ body{
         position: relative;
         margin-bottom: clamp(2.9rem, 3.32vw + 1.6rem, 7.9rem);
     }
-    &__titleCircle{
+    /*&__titleCircle{
         position: absolute;
         width: clamp(13.8rem, 2vw + 12rem, 14rem);
         height: clamp(13.8rem, 2vw + 12rem, 14rem);
         top: -49px;
         left: -70px;
         z-index: -1;
-    }
+    }*/
     &__titleName{
         color: $black;
         font-size: clamp(1.6rem, 0.82vw + 1.25rem, 2.8rem);
@@ -1143,6 +1201,19 @@ body{
         letter-spacing: clamp(0.048rem, 1vw - 0.75rem, 0.084rem);
         text-transform: uppercase;
         margin: 0;
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            background: $white;
+            border-radius: 100%;
+            width: clamp(13.8rem, 2vw + 12rem, 14rem);
+            height: clamp(13.8rem, 2vw + 12rem, 14rem);
+            top: -49px;
+            left: -70px;
+            z-index: -1;
+        }
     }
     &__titleDesctiption{
         color: $black;
@@ -1225,23 +1296,41 @@ body{
         font-weight: 700;
         line-height: clamp(3.3rem, 2vw + 2.5rem, 6.3rem);
         margin: 0;
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            background: $white;
+            border-radius: 100%;
+            width: clamp(4rem, 3.35vw + 2.65rem, 9rem);
+            height: clamp(4rem, 3.35vw + 2.65rem, 9rem);
+            top: calc(-1*clamp(0.3rem, 0.65vw, 1.2rem));
+            left: calc(-1*clamp(2.1rem, 2vw + 1.25rem, 4.5rem));
+            z-index: -1;
+        }
+        &_mod{
+            &::before{
+                display: none;
+            }
+        }
     }
-    &__tariff-1-Circle{
+    /*&__tariff-1-Circle{
         position: absolute;
         width: clamp(4rem, 3.35vw + 2.65rem, 9rem);
         height: clamp(4rem, 3.35vw + 2.65rem, 9rem);
         top: clamp(42.6rem, 15.5vw + 36rem, 65.4rem);
         right: clamp(16rem, 50vw - 3rem, 90.5rem);
         z-index: -1;
-    }
-    &__tariff-3-Circle{
+    }*/
+    /*&__tariff-3-Circle{
         position: absolute;
         width: clamp(4rem, 3.35vw + 2.65rem, 9rem);
         height: clamp(4rem, 3.35vw + 2.65rem, 9rem);
         bottom: -13px;
         right: clamp(16rem, 50vw - 3rem, 90.5rem);
         z-index: -1;
-    }
+    }*/
 }
 .contact{
     &__header{
@@ -1251,7 +1340,7 @@ body{
         border-bottom: 1px solid $black;
         padding-bottom: clamp(2.9rem, 2vw + 2.1rem, 5.9rem);
     }
-    &__headerCircle{
+    /*&__headerCircle{
         width: clamp(19rem, 7.3vw + 16.2rem, 30rem);
         height: clamp(19rem, 7.3vw + 16.2rem, 30rem);
         border-radius: 300px;
@@ -1259,7 +1348,7 @@ body{
         z-index: -1;
         top: -29px;
         left: -151px;
-    }
+    }*/
     &__headerTitle{
         color: $black;
         font-size: clamp(1.6rem, 0.82vw + 1.25rem, 2.8rem);
@@ -1269,6 +1358,36 @@ body{
         text-transform: uppercase;
         max-width: 286px;
         margin: 0;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: clamp(2.734rem, 2.5vw + 1.8rem, 6.534rem);
+            height: clamp(4.067rem, 2.5vw + 3.1rem, 7.767rem);
+            background-image: url('/src/images/Logo.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: calc(-1*clamp(-9.8rem, 19vw - 17rem, 17.6rem));
+            top: 23px;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            display: block;
+            background-image: url('/src/images/Circle.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: clamp(19rem, 7.3vw + 16.2rem, 30rem);
+            height: clamp(19rem, 7.3vw + 16.2rem, 30rem);
+            border-radius: 300px;
+            position: absolute;
+            z-index: -1;
+            top: -29px;
+            left: -151px;
+        }
     }
     &__headerDecription{
         color: $black;
@@ -1534,22 +1653,42 @@ body{
 }
 
 @media(max-width: 1300px){
-    .logo{
-        top: clamp(15.9rem, 10vw + 9rem, 21rem);
-        &_contact{
-            top: -100px;
-            right: clamp(66rem, 85vw - 6.5rem, 103.5rem);
+    .contact{
+        &__headerTitle{
+            &::before{
+                top: calc(-1*clamp(5rem, 2.2vw + 4.17rem, 7rem));
+                left: 98px;;
+            }
+            &::after{
+                left: -53px;
+                top: -53px;
+            }
         }
     }
+    .webDeveloper{
+        &__name{
+            &::before{
+                top: clamp(10.1rem, 7vw + 5rem, 14rem);
+                left: 2px;
+            }
+            &::after{
+                top: -24px;
+                left: -52px;
+            }
+        }
+    }
+    /*.logo{
+        top: clamp(15.9rem, 10vw + 9rem, 21rem);
+    }*/
 }
 
 @media(max-width: 800px){
-    .logo{
+    /*.logo{
         &_contact{
             left: 97px;
             top: 29px;
         }
-    }
+    }*/
     .header{
         &__navigation, &__mail{
             display: none;
@@ -1761,10 +1900,10 @@ body{
         }
         &__titleName{
             margin-bottom: 2rem;
-        }
-        &__titleCircle{
-            top: -58px;
-            left: -87px;
+            &::before{
+                top: -57px;
+                left: -86px;
+            }
         }
         &__tariff-3-Circle{
             bottom: 4px;
@@ -1814,10 +1953,10 @@ body{
             border-top: 1px solid $black;
             padding-top: 8rem;
         }
-        &__headerCircle{
+        /*&__headerCircle{
             left: -54px;
             top: 27px;
-        }
+        }*/
         &__headerTitle{
             max-width: clamp(17rem, 27vw + 7.1rem, 28.6rem);
         }
