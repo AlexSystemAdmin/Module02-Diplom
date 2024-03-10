@@ -142,7 +142,7 @@
                 <h1 class="webDeveloper__profession">web-разработчик</h1>
                 <div class="discussingProject">
                     <div class="discussingProject__pointer">
-                        <div class="textSVG-pointer">
+                        <div class="textSVG-pointer" onclick="open_container_menuMobi_contact_webDeveloper()">
                             <div class="textSVG-pointer__box">
                                 <p class="textSVG-pointer__text">Обсудить проект</p>
                                 <img class="textSVG-pointer__pointer" src="./images/Arrow.svg" alt="">
@@ -371,7 +371,7 @@
                     <div class="tariffs__tariffItem tariffs__tariffItem_mod-1">
                         <p id="tariffs__tariffsTitle_correct-1" class="tariffs__tariffTitle">Разработка лэндинга&nbsp;или&nbsp;сайт визитки</p>
                         <p id="tariffs__tariffDescription_correct-1" class="tariffs__tariffDescription">Небольшой сайт состоящий из одной страницы</p>
-                        <div class="textSVG-pointer">
+                        <div class="textSVG-pointer" onclick="open_container_menuMobi_contact_tarifs()">
                             <div class="textSVG-pointer__box">
                                 <p class="textSVG-pointer__text">Обсудить проект</p>
                                 <img class="textSVG-pointer__pointer" src="./images/Arrow.svg" alt="">
@@ -399,7 +399,7 @@
                     <div class="tariffs__tariffItem tariffs__tariffItem_mod-2">
                         <p class="tariffs__tariffTitle">Разработка корпоративного  сайта</p>
                         <p id="tariffs__tariffDescription_correct-2" class="tariffs__tariffDescription tariffs__tariffDescription_mod-1">Небольшой сайт с n-количеством страниц</p>
-                        <div class="textSVG-pointer">
+                        <div class="textSVG-pointer" onclick="open_container_menuMobi_contact_tarifs()">
                             <div class="textSVG-pointer__box">
                                 <p class="textSVG-pointer__text">Обсудить проект</p>
                                 <img class="textSVG-pointer__pointer" src="./images/Arrow.svg" alt="">
@@ -426,7 +426,7 @@
                     <div class="tariffs__tariffItem tariffs__tariffItem_mod-3">
                         <p id="tariffs__tariffsTitle_correct-3" class="tariffs__tariffTitle">Разработка интернет&nbsp;-&nbsp;магазина</p>
                         <p id="tariffs__tariffDescription_corect_3" class="tariffs__tariffDescription tariffs__tariffDescription_mod-3">Полноценный каталог вашей продукции</p>
-                        <div class="textSVG-pointer">
+                        <div class="textSVG-pointer" onclick="open_container_menuMobi_contact_tarifs()">
                             <div class="textSVG-pointer__box">
                                 <p class="textSVG-pointer__text">Обсудить проект</p>
                                 <img class="textSVG-pointer__pointer" src="./images/Arrow.svg" alt="">
@@ -653,12 +653,32 @@
 
         function open_container_menuMobi_contact(){
             let container_menuMobi_contact = document.getElementsByClassName("container-menuMobi_contact");
-            container_menuMobi_contact[0].style.top = 0
+            container_menuMobi_contact[0].style.top = 0;
         }
 
         function close_container_menuMobi_contact(){
             let container_menuMobi_contact = document.getElementsByClassName("container-menuMobi_contact");
-            container_menuMobi_contact[0].style.top = "-600px"
+            container_menuMobi_contact[0].style.top = "-600px";
+            document.body.style.overflow = '';
+        }
+
+        function open_container_menuMobi_contact_webDeveloper(){
+            let container_menuMobi_contact = document.querySelector(".container-menuMobi_contact");
+            let scroll = window.pageYOffset;
+            container_menuMobi_contact.style.top = `${scroll}px`;
+            let tabLeft = (document.documentElement.clientWidth - container_menuMobi_contact.offsetWidth) / 2;
+            container_menuMobi_contact.style.left = `${tabLeft}px`;
+            console.log(window.pageYOffset);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function open_container_menuMobi_contact_tarifs(){
+            let container_menuMobi_contact = document.querySelector(".container-menuMobi_contact");
+            let scroll = window.pageYOffset;
+            container_menuMobi_contact.style.top = `${scroll}px`;
+            let tabLeft = (document.documentElement.clientWidth - container_menuMobi_contact.offsetWidth) / 2;
+            container_menuMobi_contact.style.left = `${tabLeft}px`;
+            document.body.style.overflow = 'hidden';
         }
 
         if(document.documentElement.clientWidth <= 378){
