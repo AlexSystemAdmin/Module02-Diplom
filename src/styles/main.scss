@@ -995,11 +995,22 @@ body{
         position: relative;
         transition: 0.3s;
         cursor: pointer;
+        /*&::after{
+            content: '';
+            background-color: #E31B1B;
+            position: absolute;
+            padding: 27.5px 15px 27px;
+            max-width: 202px;
+            z-index: 1;
+            top: 132px;
+            left: 24px;
+            display: block;
+        }*/
         &:hover{
             .additionally-grid__image-3{
                 mix-blend-mode: normal;
             }
-            .additionally-grid__notification{
+            .additionally-grid__notification-js{
                 display: block;
             }
         }
@@ -1016,13 +1027,14 @@ body{
         object-fit: contain;
         mix-blend-mode: luminosity;
     }
-    &__notification{
+    &__notification-js{
         background-color: #E31B1B;
         position: absolute;
-        padding: 27.5px 15px 27px;
-        max-width: 202px;
+        padding: clamp(0.85rem, 2.7vw - 0.2rem, 2.75rem) clamp(0rem, 2.5vw - 1rem, 1.5rem) clamp(0.4rem, 3.2vw - 0.8rem, 2.7rem);
+        max-width: clamp(8rem, 18vw + 0.6rem, 20.2rem);
         z-index: 1;
-        top: 132px;
+        //top: 132px;
+        bottom: -110px;
         left: 24px;
         display: none;
         &::before{
@@ -1030,17 +1042,18 @@ body{
             position: absolute;
             border: 8px solid #F3F2F0;
             border-bottom: 7px solid #D40000;
-            top: -15px;
-        ;
-            left: 109px;
+            border-top: 0 solid #D40000;
+            top: -7px;
+            //left: 109px;
+            left: 47%;
         }
     }
     &__notificationTitle{
         color: $white;
         text-align: center;
-        font-size: 1rem;
+        font-size: clamp(0.7rem, 0.5vw + 0.45rem, 1rem);
         font-weight: 500;
-        line-height: 15px;
+        line-height: clamp(0.6rem, 1.5vw - 0.14rem, 1.5rem);
         opacity: 0.8;
         margin: 0;
         margin-bottom: 8px;
@@ -1048,9 +1061,9 @@ body{
     &__notificationDescription{
         color: $white;
         text-align: center;
-        font-size: 1rem;
+        font-size: clamp(0.7rem, 0.5vw + 0.45rem, 1rem);
         font-weight: 500;
-        line-height: 15px;
+        line-height: clamp(1.2rem, 0.5vw + 0.92rem, 1.5rem);
         opacity: 0.8;
         margin: 0;
     }
@@ -2004,6 +2017,13 @@ body{
             align-items: baseline;
         }
     }
+    .additionally-grid{
+        &__notification-js{
+            &::before{
+                left: 45%;
+            }
+        }
+    }
     .footer{
         &__tel{
             padding: 4px 10px;
@@ -2019,6 +2039,13 @@ body{
     .additionally{
         &__tesisFlex{
             display: block;
+        }
+    }
+    .additionally-grid{
+        &__notification-js{
+            &::before{
+                left: 43%;
+            }
         }
     }
 }

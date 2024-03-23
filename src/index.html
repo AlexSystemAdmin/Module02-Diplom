@@ -316,25 +316,40 @@
                         <div class="additionally-grid__cover-1">
                             <img class="additionally-grid__image-1" src="./images/html5.png" alt="">
                         </div>
+                        <div class="additionally-grid__notification additionally-grid__notification-html">
+                            <p class="additionally-grid__notificationTitle">HTML 5</p>
+                            <p class="additionally-grid__notificationDescription">Язык для структурирования и представления содержимого всемирной паутины
+                            </p>
+                        </div>
                     </div>
                     <div class="additionally-grid__item additionally-grid__item-2">
                         <div class="additionally-grid__cover-2">
                             <img class="additionally-grid__image-2" src="./images/css.png" alt="">
+                        </div>
+                        <div class="additionally-grid__notification additionally-grid__notification-css">
+                            <p class="additionally-grid__notificationTitle">CSS 3</p>
+                            <p class="additionally-grid__notificationDescription">Формальный язык декодирования и описания внешнего вида документа, написанного с использованием языка разметки
+                            </p>
                         </div>
                     </div>
                     <div class="additionally-grid__item additionally-grid__item-3">
                         <div class="additionally-grid__cover-3">
                             <img class="additionally-grid__image-3" src="./images/JavaScript.png" alt="">
                         </div>
-                        <div class="additionally-grid__notification">
+                        <div class="additionally-grid__notification additionally-grid__notification-js">
                             <p class="additionally-grid__notificationTitle">JavaScript ES6+</p>
                             <p class="additionally-grid__notificationDescription">Язык программирования высокого уровня, использующийся для придания интерактивности веб-страницам
-                                </p>
+                            </p>
                         </div>
                     </div>
                     <div class="additionally-grid__item additionally-grid__item-4">
                         <div class="additionally-grid__cover-4">
                             <img class="additionally-grid__image-4" src="./images/jquery.png" alt="">
+                        </div>
+                        <div class="additionally-grid__notification additionally-grid__notification-jquery">
+                            <p class="additionally-grid__notificationTitle">JQuery</p>
+                            <p class="additionally-grid__notificationDescription">Набор функций JavaScript, фокусирующийся на взаимодействии JavaScript и HTML
+                            </p>
                         </div>
                     </div>
                     <div class="additionally-grid__item additionally-grid__item-5">
@@ -702,6 +717,26 @@
             let container = document.getElementsByClassName("menuMobi__contactBoxControl");
             container[0].innerText = document.getElementById("menuMobi__contactItem-drop4").innerText;
         }
+
+        // script for additionally-grid__item
+
+        let aditionally_grid__notification = document.querySelectorAll('.additionally-grid__notification');
+        
+        for(let i = 0; i < aditionally_grid__notification.length; i++){
+            aditionally_grid__notification[i].style.opacity = '0';
+            aditionally_grid__notification[i].style.display = 'block';
+            let grid_otstup = (aditionally_grid__notification[i].parentElement.clientWidth - aditionally_grid__notification[i].clientWidth) / 2;
+            //console.log(aditionally_grid__notification[i].clientWidth);
+            aditionally_grid__notification[i].style.left = `${grid_otstup}px`;
+            aditionally_grid__notification[i].style.right = `${grid_otstup}px`;
+            //aditionally_grid__notification[i].style.display = 'none';
+            aditionally_grid__notification[i].style.opacity = '1';
+            aditionally_grid__notification[i].style.display = '';
+            //console.log(aditionally_grid__notification[i].clientWidth);
+            
+        }
+        //console.log(aditionally_grid__notification);
+        
     </script>
 </body>
 </html>
