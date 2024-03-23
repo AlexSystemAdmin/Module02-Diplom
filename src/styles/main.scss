@@ -941,9 +941,13 @@ body{
         //padding: clamp(0.951rem, 1.6vw + 0.25rem, 3.2rem) clamp(3.25rem, 5.1vw + 1rem, 10.6rem) clamp(0.951rem, 1.6vw + 0.25rem, 3.2rem) clamp(3.039rem, 5vw + 1rem, 10.1rem);
         //padding: clamp(0.851rem, 0.5vw + 0.5rem, 0.951rem) clamp(2.95rem, 0.5vw + 2.75rem, 3.25rem) clamp(0.751rem, 0.5vw + 0.5rem, 0.951rem) clamp(3.039rem, 5vw + 1rem, 10.1rem);
         padding: clamp(0.851rem, 1.6vw + 0.2rem, 3rem) clamp(2.95rem, 5.1vw + 1rem, 10.6rem) clamp(0.751rem, 1.61vw + 0.15rem, 3.2rem) clamp(3.039rem, 4.7vw + 1.2rem, 10.1rem);
+        position: relative;
         &:hover{
             .additionally-grid__image-1{
                 mix-blend-mode: normal;
+            }
+            .additionally-grid__notification-html{
+                display: block;
             }
             cursor: pointer;
         }
@@ -962,14 +966,39 @@ body{
         object-fit: contain;
         mix-blend-mode: luminosity;
     }
+    &__notification-html{
+        background-color: #E31B1B;
+        position: absolute;
+        padding: clamp(0.85rem, 2.7vw - 0.2rem, 2.75rem) clamp(0rem, 2.5vw - 1rem, 1.5rem) clamp(0.4rem, 3.2vw - 0.8rem, 2.7rem);
+        max-width: clamp(8rem, 18vw + 0.6rem, 20.2rem);
+        z-index: 1;
+        //top: 132px;
+        bottom: -110px;
+        left: 24px;
+        display: none;
+        &::before{
+            content: "";
+            position: absolute;
+            border: 8px solid #F3F2F0;
+            border-bottom: 7px solid #D40000;
+            border-top: 0 solid #D40000;
+            top: -7px;
+            //left: 109px;
+            left: 47%;
+        }
+    }
     &__item-2{
         border: 1px solid $black;
         //padding: clamp(0.981rem, 1.6vw + 0.25rem, 3.2rem) clamp(3.166rem, 4.8vw + 1.25rem, 10.123rem) clamp(0.984rem, 1.1vw + 0.56rem, 2.61rem) clamp(3.052rem, 5vw + 1rem, 10.4rem);
         //padding: clamp(0.781rem, 0.5vw + 0.53rem, 0.981rem) clamp(2.866rem, 0.8vw + 2.45rem, 3.166rem) clamp(0.684rem, 0.8vw + 0.27rem, 0.984rem) clamp(3.052rem, 5vw + 1rem, 10.4rem);
         padding: clamp(0.781rem, 1.65vw + 0.1rem, 3.2rem) clamp(2.866rem, 4.8vw + 1rem, 10.123rem) clamp(0.684rem, 1.32vw + 0.15rem, 2.61rem) clamp(3.052rem, 4.9vw + 1.1rem, 10.4rem);
+        position: relative;
         &:hover{
             .additionally-grid__image-2{
                 mix-blend-mode: normal;
+            }
+            .additionally-grid__notification-css{
+                display: block;
             }
             cursor: pointer;
         }
@@ -986,6 +1015,27 @@ body{
         object-fit: contain;
         //height: clamp(2.44rem, 4.2vw + 0.25rem, 8.19rem);
         mix-blend-mode: luminosity;
+    }
+    &__notification-css{
+        background-color: #E31B1B;
+        position: absolute;
+        padding: clamp(0.85rem, 2.7vw - 0.2rem, 2.75rem) clamp(0rem, 2.5vw - 1rem, 1.5rem) clamp(0.4rem, 3.2vw - 0.8rem, 2.7rem);
+        max-width: clamp(8rem, 18vw + 0.6rem, 20.2rem);
+        z-index: 1;
+        //top: 132px;
+        bottom: -120px;
+        left: 24px;
+        display: none;
+        &::before{
+            content: "";
+            position: absolute;
+            border: 8px solid #F3F2F0;
+            border-bottom: 7px solid #D40000;
+            border-top: 0 solid #D40000;
+            top: -7px;
+            //left: 109px;
+            left: 47%;
+        }
     }
     &__item-3{
         border: 1px solid $black;
@@ -1072,9 +1122,13 @@ body{
         //padding: clamp(0.981rem, 1.7vw + 0.25rem, 3.4rem) clamp(3.166rem, 4.8vw + 1.25rem, 10.323rem) clamp(0.984rem, 1.15vw + 0.5rem, 2.61rem) clamp(3.052rem, 5vw + 1rem, 10.4rem);
         //padding: clamp(0.881rem, 0.5vw + 0.53rem, 0.981rem) clamp(2.866rem, 0.7vw + 2.54rem, 3.166rem) clamp(0.884rem, 0.7vw + 0.35rem, 0.984rem) clamp(3.052rem, 5vw + 1rem, 10.4rem);
         padding: clamp(0.881rem, 1.43vw + 0.3rem, 3rem) clamp(2.866rem, 5vw + 0.9rem, 10.323rem) clamp(0.884rem, 1.15vw + 0.44rem, 2.61rem) clamp(3.052rem, 5vw + 1rem, 10.4rem);
+        position: relative;
         &:hover{
             .additionally-grid__image-4{
                 mix-blend-mode: normal;
+            }
+            .additionally-grid__notification-jquery{
+                display: block;
             }
             cursor: pointer;
         }
@@ -1091,14 +1145,39 @@ body{
         object-fit: contain;
         mix-blend-mode: luminosity;
     }
+    &__notification-jquery{
+        background-color: #E31B1B;
+        position: absolute;
+        padding: clamp(0.85rem, 2.7vw - 0.2rem, 2.75rem) clamp(0rem, 2.5vw - 1rem, 1.5rem) clamp(0.4rem, 3.2vw - 0.8rem, 2.7rem);
+        max-width: clamp(8rem, 18vw + 0.6rem, 20.2rem);
+        z-index: 1;
+        //top: 132px;
+        bottom: -110px;
+        left: 24px;
+        display: none;
+        &::before{
+            content: "";
+            position: absolute;
+            border: 8px solid #F3F2F0;
+            border-bottom: 7px solid #D40000;
+            border-top: 0 solid #D40000;
+            top: -7px;
+            //left: 109px;
+            left: 47%;
+        }
+    }
     &__item-5{
         border: 1px solid $black;
         //padding: clamp(1.059rem, 1.72vw + 0.35rem, 3.6rem) clamp(3.22rem, 5vw + 1.25rem, 10.523rem) clamp(1.13rem, 1.6vw + 0.48rem, 3.51rem) clamp(3.25rem, 5vw + 1.25rem, 10.7rem);
         //padding: clamp(0.859rem, 0.7vw + 0.45rem, 1.059rem) clamp(2.82rem, 0.8vw + 2.5rem, 3.22rem) clamp(0.83rem, 0.8vw + 0.4rem, 1.13rem) clamp(3.15rem, 0.8vw + 2.54rem, 3.25rem);
         padding: clamp(0.859rem, 1.82vw + 0.15rem, 3.6rem) clamp(2.82rem, 5.15vw + 0.75rem, 10.523rem) clamp(0.83rem, 1.8vw + 0.1rem, 3.8rem) clamp(3.15rem, 5vw + 1.25rem, 10.7rem);
+        position: relative;
         &:hover{
             .additionally-grid__image-5{
                 mix-blend-mode: normal;
+            }
+            .additionally-grid__notification-bootstrap{
+                display: block;
             }
             cursor: pointer;
         }
@@ -1115,14 +1194,39 @@ body{
         object-fit: contain;
         mix-blend-mode: luminosity;
     }
+    &__notification-bootstrap{
+        background-color: #E31B1B;
+        position: absolute;
+        padding: clamp(0.85rem, 2.7vw - 0.2rem, 2.75rem) clamp(0rem, 2.5vw - 1rem, 1.5rem) clamp(0.4rem, 3.2vw - 0.8rem, 2.7rem);
+        max-width: clamp(8rem, 18vw + 0.6rem, 20.2rem);
+        z-index: 1;
+        //top: 132px;
+        bottom: -150px;
+        left: 24px;
+        display: none;
+        &::before{
+            content: "";
+            position: absolute;
+            border: 8px solid #F3F2F0;
+            border-bottom: 7px solid #D40000;
+            border-top: 0 solid #D40000;
+            top: -7px;
+            //left: 109px;
+            left: 47%;
+        }
+    }
     &__item-6{
         border: 1px solid $black;
         //padding: clamp(1.297rem, 2.2vw + 0.45rem, 4.5rem) clamp(2.708rem, 4.2vw + 1rem, 8.923rem) clamp(1.368rem, 1.48vw + 0.75rem, 3.51rem) clamp(2.631rem, 4.3vw + 1rem, 8.9rem);
         //padding: clamp(1.097rem, 0.8vw + 0.6rem, 1.297rem) clamp(2.508rem, 0.8vw + 2rem, 2.708rem) clamp(1.168rem, 0.8vw + 0.65rem, 1.368rem) clamp(2.631rem, 4.3vw + 1rem, 8.9rem);
         padding: clamp(1.097rem, 2.27vw + 0.2rem, 4.5rem) clamp(2.508rem, 4.3vw + 0.8rem, 8.923rem) clamp(1.168rem, 1.55vw + 0.57rem, 3.51rem) clamp(2.631rem, 4.2vw + 1rem, 8.9rem);
+        position: relative;
         &:hover{
             .additionally-grid__image-6{
                 mix-blend-mode: normal;
+            }
+            .additionally-grid__notification-php{
+                display: block;
             }
             cursor: pointer;
         }
@@ -1139,14 +1243,39 @@ body{
         object-fit: contain;
         mix-blend-mode: luminosity;
     }
+    &__notification-php{
+        background-color: #E31B1B;
+        position: absolute;
+        padding: clamp(0.85rem, 2.7vw - 0.2rem, 2.75rem) clamp(0rem, 2.5vw - 1rem, 1.5rem) clamp(0.4rem, 3.2vw - 0.8rem, 2.7rem);
+        max-width: clamp(8rem, 18vw + 0.6rem, 20.2rem);
+        z-index: 1;
+        //top: 132px;
+        bottom: -110px;
+        left: 24px;
+        display: none;
+        &::before{
+            content: "";
+            position: absolute;
+            border: 8px solid #F3F2F0;
+            border-bottom: 7px solid #D40000;
+            border-top: 0 solid #D40000;
+            top: -7px;
+            //left: 109px;
+            left: 47%;
+        }
+    }
     &__item-7{
         border: 1px solid $black;
         //padding: clamp(1.059rem, 1.8vw + 0.35rem, 3.7rem) clamp(3.069rem, 4vw + 1.5rem, 8.923rem) clamp(1.159rem, 1.6vw + 0.5rem, 3.51rem) clamp(2.992rem, 5vw + 1rem, 10.2rem);
         //padding: clamp(0.959rem, 0.8vw + 0.35rem, 1.059rem) clamp(2.669rem, 0.9vw + 2.27rem, 3.069rem) clamp(0.859rem, 0.9vw + 0.37rem, 1.159rem) clamp(2.992rem, 5vw + 1rem, 10.2rem);
         padding: clamp(0.959rem, 1.8vw + 0.28rem, 3.7rem) clamp(2.669rem, 4.1vw + 1.13rem, 8.923rem) clamp(0.859rem, 1.75vw + 0.18rem, 3.51rem) clamp(2.992rem, 4.1vw + 1.4rem, 9.2rem);
+        position: relative;
         &:hover{
             .additionally-grid__image-7{
                 mix-blend-mode: normal;
+            }
+            .additionally-grid__notification-VueJs{
+                display: block;
             }
             cursor: pointer;
         }
@@ -1163,14 +1292,39 @@ body{
         object-fit: contain;
         mix-blend-mode: luminosity;
     }
+    &__notification-VueJs{
+        background-color: #E31B1B;
+        position: absolute;
+        padding: clamp(0.85rem, 2.7vw - 0.2rem, 2.75rem) clamp(0rem, 2.5vw - 1rem, 1.5rem) clamp(0.4rem, 3.2vw - 0.8rem, 2.7rem);
+        max-width: clamp(8rem, 18vw + 0.6rem, 20.2rem);
+        z-index: 1;
+        //top: 132px;
+        bottom: -110px;
+        left: 24px;
+        display: none;
+        &::before{
+            content: "";
+            position: absolute;
+            border: 8px solid #F3F2F0;
+            border-bottom: 7px solid #D40000;
+            border-top: 0 solid #D40000;
+            top: -7px;
+            //left: 109px;
+            left: 47%;
+        }
+    }
     &__item-8{
         border: 1px solid $black;
         //padding: clamp(1rem, 1.87vw + 0.25rem, 3.7rem) clamp(3.189rem, 4vw + 1.6rem, 9.223rem) clamp(1.1rem, 1.4vw + 0.55rem, 3.11rem) clamp(3.082rem, 5vw + 1rem, 10.4rem);
         //padding: clamp(0.9rem, 0.9vw + 0.2rem, 1rem) clamp(2.989rem, 0.9vw + 2.4rem, 3.189rem) clamp(0.8rem, 0.9vw + 0.3rem, 1.1rem) clamp(3.082rem, 5vw + 1rem, 10.4rem);
         padding: clamp(0.9rem, 1.65vw + 0.28rem, 3.4rem) clamp(2.989rem, 4.1vw + 1.45rem, 9.223rem) clamp(0.8rem, 1.54vw + 0.2rem, 3.11rem) clamp(3.082rem, 4.15vw + 1.5rem, 9.4rem);
+        position: relative;
         &:hover{
             .additionally-grid__image-8{
                 mix-blend-mode: normal;
+            }
+            .additionally-grid__notification-Wordpress{
+                display: block;
             }
             cursor: pointer;;
         }
@@ -1186,6 +1340,27 @@ body{
         height: 100%;
         object-fit: contain;
         mix-blend-mode: luminosity;
+    }
+    &__notification-Wordpress{
+        background-color: #E31B1B;
+        position: absolute;
+        padding: clamp(0.85rem, 2.7vw - 0.2rem, 2.75rem) clamp(0rem, 2.5vw - 1rem, 1.5rem) clamp(0.4rem, 3.2vw - 0.8rem, 2.7rem);
+        max-width: clamp(8rem, 18vw + 0.6rem, 20.2rem);
+        z-index: 1;
+        //top: 132px;
+        bottom: -110px;
+        left: 24px;
+        display: none;
+        &::before{
+            content: "";
+            position: absolute;
+            border: 8px solid #F3F2F0;
+            border-bottom: 7px solid #D40000;
+            border-top: 0 solid #D40000;
+            top: -7px;
+            //left: 109px;
+            left: 47%;
+        }
     }
 }
 .tariffs{
@@ -1696,6 +1871,17 @@ body{
     }*/
 }
 
+@media(max-width: 960px){
+    .additionally-grid{
+        &__notification-html{
+            bottom: -100px;
+        }
+        &__notification-jquery{
+            bottom: -95px;
+        }
+    }
+}
+
 @media(max-width: 800px){
     /*.logo{
         &_contact{
@@ -1908,6 +2094,9 @@ body{
             height: 30px;
         }
     }
+    .additionally-grid__notification-html {
+        bottom: -87px;
+    }
     .tariffs{
         &__title{
             flex-direction: column;
@@ -2018,6 +2207,7 @@ body{
         }
     }
     .additionally-grid{
+        
         &__notification-js{
             &::before{
                 left: 45%;
@@ -2047,9 +2237,20 @@ body{
                 left: 43%;
             }
         }
+        &__notification-php{
+            bottom: -120px;
+        }
+        &__notification-bootstrap{
+            bottom: -160px;
+        }
     }
 }
 @media(max-width: 400px){
+    .additionally-grid{
+        &__notification-bootstrap{
+            bottom: -170px;
+        }
+    }
     .menuMobi{
         &__contactHeaderTitle{
             margin-top: 6rem;
