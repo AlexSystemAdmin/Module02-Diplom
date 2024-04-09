@@ -86,7 +86,7 @@ body{
         padding-top: 2rem;
         padding-bottom: 2rem;
         &_mod{
-            border-bottom: none;
+            border-bottom: 1px solid rgba(1, 1, 1, 0.1);
             border-top: 1px solid rgba($black, .2);
         }
     }
@@ -672,7 +672,8 @@ body{
         font-size: clamp(1.6rem, 1vw + 1rem, 2.8rem);
         line-height: clamp(2.4rem, 1.29vw + 1.75rem, 4.2rem);
         margin: 0;
-        flex-basis: 450px;
+        //flex-basis: 450px;
+        flex-basis: clamp(16rem, 37.3vw + 2rem, 45rem);
     }
     &__technologyDescription{
         color: $black;
@@ -1874,6 +1875,11 @@ body{
             }
         }
     }
+    .about{
+        &__technologyDescription{
+            flex-basis: 48%;
+        }
+    }
     /*.logo{
         top: clamp(15.9rem, 10vw + 9rem, 21rem);
     }*/
@@ -1976,21 +1982,25 @@ body{
         }
         &__technology-2{
             padding: clamp(1.45rem, 3.7vw, 2.9rem) 0;
-            gap: clamp(2rem, 27vw - 8rem, 13rem);
+            //gap: clamp(2rem, 27vw - 8rem, 13rem);
+            gap: clamp(2.7rem, 27vw - 8rem, 13rem);
         }
         &__technologyTitle-2{
-            max-width: clamp(15rem, 55vw - 5rem, 37.9rem);
+            //max-width: clamp(15rem, 55vw - 5rem, 37.9rem);
+            max-width: clamp(14.3rem, 52vw - 5rem, 36rem);
             margin-top: -5px;
         }
         &__technologyDescription-2{
             max-width: clamp(17rem, 90vw - 16rem, 54.9rem);
         }
         &__technology-3{
-            gap: clamp(0.5rem, 31vw - 11rem, 13rem);
+            //gap: clamp(0.5rem, 31vw - 11rem, 13rem);
+            gap: clamp(2.7rem, 27vw - 8rem, 13rem);
             padding: clamp(1.45rem, 3.8vw, 3rem) 0;
         }
         &__technologyTitle-3{
-            max-width: clamp(16.5rem, 63vw - 8rem, 41.7rem);
+            //max-width: clamp(16.5rem, 63vw - 8rem, 41.7rem);
+            max-width: clamp(14.3rem, 52vw - 5rem, 36rem);
             margin-top: -5px;
         }
         &__technologyDescription-3{
