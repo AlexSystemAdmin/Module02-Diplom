@@ -2227,20 +2227,31 @@ body{
         &__contactBoxButton{}
     }*/
 }
+@media(max-width: 768px){
+    .additionally-grid{
+        &__item{
+            &:hover{
+                .additionally-grid__notification{
+                    display: none;
+                }
+            }
+        }
+    }
+}
 @media(max-width: 660px){
     .tariffs{
         &__tariffIncludesDescription_mod{
             align-items: baseline;
         }
     }
-    .additionally-grid{
+    /*.additionally-grid{
         
         &__notification-js{
             &::before{
                 left: 45%;
             }
         }
-    }
+    }*/
     .footer{
         &__tel{
             padding: 4px 10px;
@@ -2258,7 +2269,7 @@ body{
             display: block;
         }
     }
-    .additionally-grid{
+    /*.additionally-grid{
         &__notification-js{
             &::before{
                 left: 43%;
@@ -2270,14 +2281,14 @@ body{
         &__notification-bootstrap{
             bottom: -160px;
         }
-    }
+    }*/
 }
 @media(max-width: 400px){
-    .additionally-grid{
+    /*.additionally-grid{
         &__notification-bootstrap{
             bottom: -170px;
         }
-    }
+    }*/
     .menuMobi{
         &__contactHeaderTitle{
             margin-top: 6rem;
