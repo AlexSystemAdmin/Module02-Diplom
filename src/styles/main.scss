@@ -2229,9 +2229,58 @@ body{
 }
 @media(max-width: 768px){
     .additionally-grid{
-        &__item{
+        &__item-1{
             &:hover{
-                .additionally-grid__notification{
+                .additionally-grid__notification-html{
+                    display: none;
+                }
+            }
+        }
+        &__item-2{
+            &:hover{
+                .additionally-grid__notification-css{
+                    display: none;
+                }
+            }
+        }
+        &__item-3{
+            &:hover{
+                .additionally-grid__notification-js{
+                    display: none;
+                }
+            }
+        }
+        &__item-4{
+            &:hover{
+                .additionally-grid__notification-jquery{
+                    display: none;
+                }
+            }
+        }
+        &__item-5{
+            &:hover{
+                .additionally-grid__notification-bootstrap{
+                    display: none;
+                }
+            }
+        }
+        &__item-6{
+            &:hover{
+                .additionally-grid__notification-php{
+                    display: none;
+                }
+            }
+        }
+        &__item-7{
+            &:hover{
+                .additionally-grid__notification-VueJs{
+                    display: none;
+                }
+            }
+        }
+        &__item-8{
+            &:hover{
+                .additionally-grid__notification-Wordpress{
                     display: none;
                 }
             }
