@@ -1896,7 +1896,7 @@ body{
     }
     .tariffs{
         &__tariffIncludes{
-            max-width: 180px;
+            max-width: 190px;
         }
     }
 }
@@ -2161,6 +2161,9 @@ body{
         }
         &__tariffDescription_mod-3{
             margin-bottom: clamp(2rem, 3.2vw + 0.7rem, 6.6rem);
+        }
+        &__tariffIncludes{
+            max-width: clamp(17rem, 4vw + 14.82rem, 18rem);
         }
         &__tariffIncludesList{
             margin-bottom: 3rem;
